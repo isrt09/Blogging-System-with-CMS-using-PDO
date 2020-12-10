@@ -1,4 +1,7 @@
-<?php require_once('./includes/header.php'); ?>
+<?php 
+  require_once('./includes/db.php'); 
+  require_once('./includes/header.php'); 
+?>
     <div class="fluid-container">
       <?php require_once('./includes/navbar.php'); ?>
       <section id="main" class="mx-5">

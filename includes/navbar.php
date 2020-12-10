@@ -6,15 +6,18 @@
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">PHP</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">JavaScript</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">NodeJS</a>
-            </li>
+            <?php 
+               $sql  = "SELECT * FROM categories";
+               $stmt = $pdo->prepare($sql);
+               $stmt->execute();
+               while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+                  $category_id   = $row['category_id'];
+                  $category_name = $row['category_name']; ?>
+                  <li class="nav-item">
+                    <a class="nav-link" href="categories.php?id=<?php echo $category_id; ?>"><?php echo $category_name; ?></a>
+                  </li>                  
+               <?php }            
+             ?>                                   
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" style="font-size: 14px" type="search" placeholder="Search" aria-label="Search">
