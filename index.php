@@ -24,7 +24,7 @@
                 <div class="media-body col col-lg-8 col-md-12">
                   <h5 class="mt-0"><a href="single.php?id=<?php echo $post_id; ?>"><?php echo $post_title; ?> </a></h5>
 
-                  <span class="posted"><a href="categories.html" class="category">                    
+                  <span class="posted"><a href="categories.php?id=<?php echo  $post_category; ?>" class="category">                    
                       <?php 
                         $query = "SELECT * FROM categories WHERE category_id=:id";
                         $stmt1  = $pdo->prepare($query);
