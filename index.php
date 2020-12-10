@@ -22,7 +22,7 @@
               <div class="row my-4 single-post">
                 <img class="col col-lg-4 col-md-12" src="./img/<?php echo $post_image; ?>" alt="Image">
                 <div class="media-body col col-lg-8 col-md-12">
-                  <h5 class="mt-0"><a href="#"><?php echo $post_title; ?> </a></h5>
+                  <h5 class="mt-0"><a href="single.php?id=<?php echo $post_id; ?>"><?php echo $post_title; ?> </a></h5>
 
                   <span class="posted"><a href="categories.html" class="category">                    
                       <?php 
@@ -38,7 +38,7 @@
                   <p>
                     <?php echo $post_desc; ?>.
                   </p>
-                  <span><a href="single.php" class="d-block">See more &rarr;</a></span>
+                  <span><a href="single.php?id=<?php echo $post_id; ?>" class="d-block">See more &rarr;</a></span>
                 </div>
               </div>
            <?php }
